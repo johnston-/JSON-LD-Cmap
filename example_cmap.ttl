@@ -1,0 +1,26 @@
+example cmap.ttl
+sero:Triple :subject skos:Concept.
+	:predicate skos:semanticRelation.
+	:object: skos:Concept;
+
+//each time a map is created, it namespaces an ld environment for the concepts, relationships, triples.
+//this allows the graph to have entities created in real-time and asynchronously retrieve objective references to those concepts.
+//then match with skos:exactMatch or other rdf reference.
+
+//assessments will now exist separate from the graph and reference graphs when they are generated.
+
+brian-0142354:triple01234 a sero:Triple;
+	:subject brian-0142354:concept423432;
+	:predicate brian-0142354:relation8274;
+	:object brian-0142354:concept328867.
+
+
+
+brian-0142354:concept423432 a skos:Concept.
+	skos:prefLabel "This";
+
+brian-0142354:relationship8274 a skos:semanticRelation.
+	skos:prefLabel "is";
+
+brian-0142354:concept328867 a skos:Concept.
+	skos:prefLabel "Test";
